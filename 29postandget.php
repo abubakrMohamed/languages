@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        form {
+            display: none;
+        }
+    </style>
     <title>POST and GET</title>
 </head>
 <body>
     <div id="div">
-        <form action="29postandget.php" method="POST" id="">
+        <form action="29postandget.php" method="POST" id="myform">
             <label for="username">Username</label>
             <input type="text"  name="username" id="username">
             <label for="password">Password</label>
@@ -22,9 +27,10 @@
     ?>
     <script>
         document.getElementById("onclick")
-            .addEventListener("click,", function() {
-            document.getElementById("div").hidden = true;
-            }, false);
+            .addEventListener("click", function() {
+            document.getElementById("myform").hidden = true;
+            // document.getElementById("awesome").hidden = false;
+});
     </script>
 
 </body>
