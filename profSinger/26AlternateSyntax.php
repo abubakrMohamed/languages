@@ -15,18 +15,19 @@
 </head>
 <body>
     <div id="content">
-        <?php
-            if(empty($number)) {
-                echo "<h2>Enter your Number </h2>";
-            } else {
-                echo '<h2>Your number is '.$number.'</h2>';
-                echo "<ul>";
-                    for ($i=0; $i <=$number; $i++) { 
-                    echo '<li>'.$i.'</li>';
-                    }
-                echo "</ul>";
-            }
-        ?>
+        
+    <?php if(empty($number)) : ?>
+            <h2>Enter your Number </h2>
+            <?php  else : ?>
+                <h2>Your number is <?= $number ?></h2>
+
+                <ul>
+                    <?php for($i=1; $i <=$number; $i=$i*2) : ?>
+                    <li> <?= $i;  ?> </li>
+                    <?php endfor ?>
+                </ul>
+            <?php endif ?>
+
         <form action="26AlternateSyntax.php" method="post">
             <p>
                 <label for="number">Number</label>
