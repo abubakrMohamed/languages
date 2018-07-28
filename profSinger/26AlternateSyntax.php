@@ -1,7 +1,8 @@
-<?php
-    //$number = "";
-    (isset($_POST['number']))? $number = $_POST['number'] : $number = "";
-
+<?php 
+    $number = "";
+    if (isset($_POST['number'])) {
+        $number = $_POST['number'];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -14,27 +15,26 @@
 </head>
 <body>
     <div id="content">
-        <form action="26AlternateSyntax.php" method="POST">
-            <?php
-                if (empty($number)) {
-                    echo "<h2>Enter number to count ...</h2>";
-                } else {
-                    echo '<h2>Your number is '.$number.'</h2>';
-                    echo '<ul>';
-                    for($i=0; $i<=$number; $i++) {
-                        echo '<li>' .$i. '</li>';
+        <?php
+            if(empty($number)) {
+                echo "<h2>Enter your Number </h2>";
+            } else {
+                echo '<h2>Your number is '.$number.'</h2>';
+                echo "<ul>";
+                    for ($i=0; $i <=$number; $i++) { 
+                    echo '<li>'.$i.'</li>';
                     }
-                    echo '</ul>';
-                }
-            ?>
+                echo "</ul>";
+            }
+        ?>
+        <form action="26AlternateSyntax.php" method="post">
             <p>
                 <label for="number">Number</label>
-                <input type="test" name="number" value="<?php echo $number; ?>" id="number"> 
+                <input type="number" name= "number" value="<?= $number ?>" id="number">
             </p>
             <p>
-                <input type="submit" value="Continue &rarr;"> 
+                <input type="submit" value="Continue &rarr;">
             </p>
-        
         </form>
     </div>
     
