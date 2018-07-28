@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     <title>POST and GET</title>
 </head>
@@ -23,6 +24,8 @@
 
 
 =======
+=======
+>>>>>>> 476f81e909a42d464225f0dba7ac539f35e0905a
     <style>
         form {
             display: none;
